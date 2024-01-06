@@ -1,0 +1,105 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>SGI</title>
+
+  <link rel="shortcut icon" href="./favicon.ico" />
+  <link rel="stylesheet" href="styles.css">
+
+  <script async src="https://unpkg.com/es-module-shims@1.8.0/dist/es-module-shims.js"></script>
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://unpkg.com/three@0.156.1/build/three.module.js",
+        "three/addons/": "https://unpkg.com/three@0.156.1/examples/jsm/",
+        "three-mesh-bvh": "https://unpkg.com/three-mesh-bvh@0.6.0/build/index.module.js"
+      }
+    }
+  </script>
+
+</head>
+
+<body>
+  <div class="game">
+    <div id="game-interface">
+      <h1>Name of the Game</h1>
+      <p>Authors: [Author Names], FEUP</p>
+
+      <div class="input-container">
+        <label for="player-name">Player Name:</label>
+        <input type="text" id="player-name">
+      </div>
+
+      <div class="input-container">
+        <label>Difficulty Level:</label>
+        <!-- Single button or multiple buttons for difficulty options -->
+        <button class="button" id="difficulty-level">Easy</button>
+        <!-- Add more buttons for other difficulty levels -->
+      </div>
+
+      <button class="button" id="start-game">Choose your Car</button>
+    </div>
+  </div>
+  <div id="car-selection">
+    <div class="container">
+      <h2 id="my-car">Choose your car:</h2>
+      <h1 id="car-name"></h1>
+    </div>
+    <div class="container">
+      <h2 id="opp-car">Choose your opponent's car:</h2>
+      <h1 id="opp-car-name"></h1>
+    </div>
+
+
+
+  </div>
+  <button class="button" id="start-game2">Start Game</button>
+
+  <div id="canvas"></div>
+  <div id="camera"></div>
+  <div class="card">
+    <div class="rating">
+      <h2><span class="counter" data-target="90">90</span> <br>KM/H</h2>
+
+    </div>
+  </div>
+  <div id="hud" class="hud">
+    <div class="container-row">
+      <div class="text">
+        <h3>Time: </h3>
+        <h3>Best Lap:</h3>
+        <h3 class="right">1:</h3>
+        <h3 class="right">2:</h3>
+        <h3 class="right">3:</h3>
+      </div>
+      <div class="text">
+        <h3 id="timer">5:00</h3>
+        <h3 id="best-lap">-:--:--</h3>
+        <h3 id="lap-1">-:--:--</h3>
+        <h3 id="lap-2">-:--:--</h3>
+        <h3 id="lap-3">-:--:--</h3>
+      </div>
+    </div>
+  </div>
+  <div class="rotation">
+    <div class="container-row">
+
+      <div class="text">
+        <h3 class="rotate">Press C to rotate</h3>
+      </div>
+
+    </div>
+  </div>
+  <div id="buffs" class="buffs">
+    <div class="container-row">
+      <div class="text">
+
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+
+</html>

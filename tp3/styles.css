@@ -1,0 +1,256 @@
+*{
+  font-family: 'Montserrat', sans-serif;
+}
+
+body { 
+    margin: 0; 
+
+}
+
+
+#canvas { 
+    width: 100%; 
+    height: 100% 
+}
+
+#camera { 
+    position: absolute; 
+    left: 100px; 
+    top: 20px; 
+    width: 100px; 
+    height: 100px; 
+    color: lightgreen; 
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px; 
+    z-index: 1000; 
+}
+
+.hud {
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 170px;
+ 
+    padding: 20px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    color: #333;
+
+  }
+
+  .buffs, .rotation{
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+  }
+  .rotation{
+    display:none;
+  }
+
+  .pu{
+    color: rgb(38, 123, 252);
+  }
+  .obs{
+    color: #bb2124;
+  }
+  .rotate{
+    font-size: x-large;
+    color: #ffffff;
+  }
+
+  .container-row{
+    display: flex;
+   
+    align-items: center;
+    gap: 20px;
+  }
+
+  h3{
+    color: darkgoldenrod;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    white-space: nowrap;
+
+  }
+  .right{
+    text-align: right;
+  }
+  .card{
+
+    display: none;
+    position: absolute;
+    bottom:  5%;
+    left:  50%;
+    transform: translateX(-50%);
+    width:  200px;
+    height:  200px;
+  }
+  .card .rating{
+    position:  relative;
+    width: 100%;
+    height:  100%;
+
+
+  }
+
+  #buffs .container-row .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #buffs .container-row .text h3{
+    margin: 0;
+    padding: 0.5em;
+   
+  }
+
+  #rotation .container-row .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #rotation .container-row .text h3{
+    margin: 0;
+    padding: 0.5em;
+   
+  }
+
+
+  .card .rating .block{
+    position:  absolute;
+    width: 2px;
+    height: 15px;
+    background-color: black;
+    left: 50%;
+    transform-origin: 50% 100px;
+   
+    animation: animate 0.2s linear forwards;
+    opacity: 0;
+
+  }
+  @keyframes animate{
+    to{
+        opacity: 1;
+    }
+    
+  }
+  .card .rating h2{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+
+  }
+
+  .card .rating h2 span{
+    font-size: 2.5em;
+    font-weight: 700;
+  }
+  .card .rating h2 sup{
+    font-size: 1.5em;
+    font-weight: 300;
+  }
+
+
+.card .rating .color-red {
+    background: rgb(221, 63, 63);
+    box-shadow: 0 0 15px rgb(221, 63, 63), 0 0 25px rgb(221, 63, 63);
+ 
+  }
+  .game{
+    position: absolute;
+    top: 20%;
+    left:  50%;
+    transform: translateX(-50%);
+  }
+  #game-interface {
+    max-width: 600px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+
+  .input-container {
+    margin-bottom: 20px;
+  }
+
+  .input-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+
+  .input-container input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
+  .button:hover {
+    background-color: #2980b9;
+  }
+
+#car-selection{
+  position: absolute;
+  left:  50%;
+  transform: translateX(-50%);
+  display: none;
+  width: 100vw;
+
+  background-color: rgba(119, 119, 119, 0.8);
+
+
+}
+.container{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+#start-game2{
+  display:none;
+  position: absolute;
+  bottom:  50%;
+  left:  50%;
+  transform: translate(-50%,-50%);
+}
+#car-selection h2, #car-selection h1{
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: #ffffff;
+  opacity: 1  ;
+  margin: 0;
+  padding: .7rem;
+}
+
+
+#opp-car, #car-name, #opp-car-name{
+  display: none;
+}
+
